@@ -1,0 +1,123 @@
+.courses_block {
+  clear: both;
+}
+.courses_block .course_block {
+  overflow: hidden;
+  padding-bottom: 5px;
+  border-top: 1px solid #000;
+}
+.courses_block .course_block:last-child {
+  border-bottom: 1px solid #000;
+}
+.courses_block .course_block:hover .course_preview_lessons {
+  opacity: 1;
+}
+.courses_block .course_block .course_description_block {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}
+.courses_block .course_block .course_description_block .course_langs {
+  width: 100px;
+  margin-right: 60px;
+  float: left;
+  overflow: hidden;
+  font: 10pt/14pt 'Pragmatica';
+}
+.courses_block .course_block .course_description_block .course_langs .lang {
+  margin-right: 5px;
+  float: left;
+}
+.courses_block .course_block .course_description_block .course_title {
+  min-width: 200px;
+  margin-right: 100px;
+  float: left;
+}
+.courses_block .course_block .course_description_block .course_subscribe {
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  font: 8pt/12pt 'Pragmatica';
+}
+.courses_block .course_block .course_description_block .course_subscribe:hover {
+  cursor: default;
+  color: #fff;
+  background-color: #000;
+}
+.courses_block .course_block .course_preview_lessons {
+  cursor: default;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+.courses_block .course_block .course_preview_lessons.hide {
+  opacity: 0;
+}
+.courses_block .course_block .course_preview_lessons .preview_circle {
+  line-height: 10px;
+  float: left;
+  margin-right: 5px;
+}
+.courses_block .course_block .course_lessons_block {
+  overflow: hidden;
+  display: none;
+  margin-left: -25px;
+  margin-bottom: 15px;
+}
+.courses_block .course_block .course_tags_block {
+  font: 10pt/14pt 'Pragmatica';
+  margin-top: 10px;
+}
+.courses_block .course_block .course_tags_block .tag {
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.courses_block .course_block .course_tags_block .tag:hover {
+  color: #808080;
+}
+.courses_block .course_block .course_tags_block .tag:before {
+  content: '#';
+}
+.lesson_chapter {
+  margin-bottom: 30px;
+}
+.lesson_chapter:last-child {
+  margin-bottom: 0px;
+}
+.lesson_chapter .chapter_title {
+  margin-bottom: 5px;
+}
+.lesson_chapter .section_block {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #000;
+  overflow: hidden;
+}
+.lesson_chapter .section_block:last-child {
+  border-bottom: 1px solid #000;
+}
+.lesson_chapter .section_block .section_description {
+  overflow: hidden;
+  cursor: default;
+}
+.lesson_chapter .section_block .section_description .section_type {
+  width: 110px;
+  float: left;
+  margin-right: 50px;
+}
+.lesson_chapter .section_block .section_description .section_title {
+  float: left;
+}
+.lesson_chapter .section_block .section_body {
+  padding-left: 160px;
+  display: none;
+}
+.lesson_chapter .section_block .section_body img {
+  width: 100%;
+}

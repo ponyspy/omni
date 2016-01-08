@@ -1,0 +1,142 @@
+body
+	margin 0
+	padding 0
+	font 12pt/14pt 'Pragmatica'
+
+.column, #resize-handle, .line
+	height 100%
+
+.menu_block
+	// background-color rgb(185, 213, 237)
+	width 100%
+	height 40px
+	border-bottom 1px solid black
+	text-align center
+	.menu_group
+		// width 70px
+		height 40px
+		position absolute
+		top 0
+		&.left
+			left 0
+			// border-right 1px solid black
+		&.right
+			right 0
+			border-left 1px solid black
+		.menu_item
+			width 70px
+			height 40px
+			font-size 20px
+			float left
+			border-right 1px solid black
+			cursor default
+			&.stat
+				&:before
+					content ''
+					position absolute
+					margin-left -0.75em
+					top 13px
+					width 1.5em
+					height 0.10em
+					background black;
+					box-shadow 0 0.35em 0 0 black, 0 0.7em 0 0 black
+				&:hover
+				&.open
+					background-color rgb(235, 190, 85)
+			&.authors
+				&:before
+					content 'A'
+					padding-top 13px
+					display block
+				&:hover
+				&.open
+					background-color rgb(41, 144, 231)
+	.menu_navigate
+		display inline-block
+		font-size 0
+		height 40px
+		padding-top 10px
+		box-sizing border-box
+		cursor pointer
+		span
+			font-size 12pt
+		.separator
+			margin-left 8px
+			margin-right 8px
+		&:hover
+			color grey
+
+.content_block
+	// background-color rgb(150, 135, 136)
+	width 1280px
+	position absolute
+	top 40px
+	bottom 0
+	left 50%
+	margin-left -640px
+	&.resize_act
+		-webkit-user-select none
+
+.column
+	width 640px
+	float left
+	overflow scroll
+	.column_inner
+		padding-top 100px
+		padding-bottom 60px
+		position relative
+		.drop_navigate
+			width 198px
+			margin-bottom 40px
+	&.left
+		.logo
+			position absolute
+			top 20px
+			width 105px
+			display block
+		.column_inner
+			.drop_navigate
+				float right
+			margin-right 15px
+		// background-color rgb(185, 213, 237)
+	&.right
+		.column_inner
+			margin-left 15px
+			p
+				-webkit-hyphens: auto;
+			// background-color rgb(176, 118, 32)
+
+
+#resize-handle
+	position absolute
+	-webkit-transform translate(640px)
+	transform translate(640px)
+	left -11px
+	top 0
+	width 21px
+	// background-color #92e
+	cursor ew-resize
+	.line
+		width 1px
+		margin 0 auto
+		background-color black
+
+.panels_block
+	.panel
+		position absolute
+		width 100%
+		z-index 99999999
+		top 41px
+		// bottom 0
+		height 240px
+		display none
+		&.authors
+			background-color rgb(41, 144, 231)
+		&.stat
+			background-color rgb(235, 190, 85)
+			.stat_courses
+				overflow hidden
+				padding-bottom 20px
+				border-bottom 1px solid black
+			circle.scale
+				stroke rgb(235, 190, 85)!important

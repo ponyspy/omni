@@ -1,0 +1,22 @@
+//- Circles elem
+
+mixin circleElem(subclass)
+	.circle_block(class=subclass, class=attributes.size)
+		.circle_text: p: block
+		svg(xmlns='http://www.w3.org/2000/svg', version='1.1', width='100%', height='100%')
+			if (attributes.size == 'big')
+				circle.outer(cx='100', cy='100', r='96')
+				circle.scale(cx='100', cy='100', r='96')
+			else
+				circle.outer(cx='52.5', cy='52.5', r='48')
+				circle.scale(cx='52.5', cy='52.5', r='48')
+
+//- Drop menu elem
+
+mixin dropMenuElem(subclass, items, checked)
+	.drop_menu(class=subclass)
+		.drop_checked= items[checked]
+		.drop_triangle
+		.drop_items
+			each item in items
+				.drop_item= item

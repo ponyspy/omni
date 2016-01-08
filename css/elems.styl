@@ -1,0 +1,109 @@
+// Circle elem
+
+.circle_block
+	// outline 1px solid red
+	position relative
+	margin-top 20px
+	margin-left 25px
+	float left
+	width 105px
+	height 105px
+	svg
+		z-index 1
+		position relative
+		circle
+			fill transparent
+			cursor pointer
+			&.outer
+				stroke black
+				stroke-width 8
+			&.scale
+				stroke white
+				stroke-width 6
+				stroke-dasharray 1000
+				stroke-dashoffset 750
+				-webkit-transform rotate(-90deg)
+				-webkit-transform-origin 50% 50%
+				transition stroke-dashoffset .4s linear
+	.circle_text
+		// outline 1px solid red
+		position absolute
+		z-index 0
+		font 10pt/12pt 'Pragmatica'
+		top 0
+		left 0
+		right 0
+		bottom 0
+		margin auto
+		width 58.5%
+		height 58.5%
+		display table
+		p
+			display table-cell
+			text-align center
+			vertical-align middle
+	&.big
+		width 200px
+		height 200px
+		.circle_text
+			font 12pt/14pt 'Pragmatica'
+			width 64%
+			height 64%
+		circle.scale
+			-webkit-transform rotate(-89deg)
+			-webkit-transform-origin 50% 50%
+	&:hover
+		.scale
+			stroke-dashoffset 900
+
+// Drop menu elem
+
+.drop_menu
+	min-width 75px
+	height 25px
+	border 1px solid black
+	cursor default
+	display inline-block
+	vertical-align -7px
+	.drop_checked
+		padding-top 5px
+		padding-left 5px
+		padding-right 5px
+		float left
+	.drop_items
+		display none
+		margin-left -1px
+		clear both
+		width 100%
+		border 1px solid black
+		&.open
+			display block
+		.drop_item
+			height 20px
+			background-color white
+			padding-top 5px
+			padding-left 5px
+			padding-right 5px
+			border-bottom 1px solid black
+			cursor default
+			z-index 999
+			position relative
+			&:hover
+				background-color lightgrey
+			&:last-child
+				border none
+	&:hover
+		.drop_triangle:after
+			content '▲'
+	.drop_triangle
+		width 25px
+		height 22px
+		border-left 1px solid black
+		float right
+		text-align center
+		padding-top 3px
+		&:after
+			content '△'
+			display block
+			-webkit-transform rotate(180deg)
+			-webkit-transform-origin 50% 50%

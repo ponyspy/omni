@@ -1,0 +1,105 @@
+include elems.jade
+
+- var randomInteger = function (min, max) { return Math.floor(min + Math.random() * (max + 1 - min)); }
+
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Omni ⦁ Lingo
+		link(rel='stylesheet', type='text/css', href='css/elems.css')
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+		link(rel='stylesheet', type='text/css', href='css/courses.css')
+		script(type='text/javascript', src='js/libs/jquery-2.1.4.min.js')
+		script(type='text/javascript', src='js/libs/interact.js')
+		script(type='text/javascript', src='js/elems.js')
+		script(type='text/javascript', src='js/main.js')
+		script(type='text/javascript', src='js/courses.js')
+	body
+		.menu_block
+			.menu_group.left
+				.menu_item.stat
+				.menu_item.authors
+			.menu_navigate
+				span.course_title Время говорить по-русски
+				span.separator= '●'
+				span.lesson_num Урок 1
+			.menu_group.right
+				.menu_item.search
+		.panels_block
+			.panel.stat
+				.stat_courses
+					each course, i in new Array(6)
+						+circleElem('course_stat')(size='big')
+							| Время говорить по-русски
+				.stat_body
+			.panel.authors
+				.author_item
+				.author_item
+				.author_item
+				.author_item
+				.author_item
+				.author_item
+		.content_block
+			.column.left#resizable-element
+				.column_inner
+					img.logo(src='images/omni-logo-2.svg')
+					+dropMenuElem('drop_navigate', ['Все', 'Ваши', 'Подписки', 'Подтвержденные'], 0)
+					.courses_block
+						each course, i in new Array(50)
+							- var lessons = new Array(randomInteger(3,10))
+							.course_block
+								.course_description_block
+									.course_langs
+										.lang RU
+										.lang EN
+										.lang JP
+										.lang FR
+										.lang IT
+										.lang DE
+									.course_title Время говорить по-русски
+									.course_subscribe ПОДПИСАТЬСЯ
+								.course_preview_lessons
+									each lesson, i in lessons
+										.preview_circle ⦁
+								.course_lessons_block
+									each lesson, i in lessons
+										+circleElem('lesson_item')
+											| Урок #{i+1}
+								.course_tags_block
+									.tag moscow
+									.tag grammar
+									.tag lexical
+									.tag moscow
+									.tag grammar
+									.tag lexical
+									.tag moscow
+									.tag grammar
+									.tag lexical
+
+			.column.right
+				.column_inner
+					+dropMenuElem('drop_navigate', ['Все', 'Сцена 1', 'Сцена 2', 'Сцена 3'], 0)
+					.lesson_chapters_block
+						each chapter, i in new Array(3)
+							.lesson_chapter
+								.chapter_title Сцена #{i+1}
+								.chapter_sections_block
+									each section, i in new Array(10)
+										.section_block
+											.section_description
+												.section_type Задания
+												.section_title Супер секция #{i+1}
+											.section_body
+												p(lang="ru") Что же это за 4-е измерение? Оно похоже на время, но это не совсем время. Это такое особенное время, которое течёт со скоростью, обратно пропорциональной расстоянию между планетой и солнцем. И относительно этого времени планета двигается с постоянной скоростью по кругу в 4 измерениях. А в обычном времени его тень в трёх измерениях двигается быстрее, когда она находится ближе к солнцу.
+												img(src='images/lessons/01.png')
+												.strings
+													| Я говорю
+													+dropMenuElem('content_select', ['раз', 'два', 'три'], 0)
+													| ты говоришь
+													+dropMenuElem('content_select', ['раз', 'два', 'три'], 0)
+													| вот и поговорили
+													br
+													| тралала парам пам пам.
+												p(lang="ru") Звучит странно – но это просто необычный способ представления обычной ньютоновской физики. Этот способ известен по крайней мере с 1980 года благодаря работе математического физика Юргена Мозера. А я узнал об этом, получив на email работу за авторством Джеспера Горансона под названием «Симметрии в задаче Кеплера» (8 марта 2015).
+			#resize-handle: .line
