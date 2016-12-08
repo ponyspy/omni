@@ -2,6 +2,7 @@
   clear: both;
 }
 .courses_block .course_block {
+  background-color: #fff;
   overflow: hidden;
   padding-bottom: 5px;
   border-top: 1px solid #000;
@@ -86,14 +87,18 @@
 }
 .lesson_chapter {
   margin-bottom: 30px;
+  background-color: #fff;
 }
 .lesson_chapter:last-child {
   margin-bottom: 0px;
 }
 .lesson_chapter .chapter_title {
+  display: inline-block;
+  outline: none;
   margin-bottom: 5px;
 }
 .lesson_chapter .section_block {
+  background-color: #fff;
   padding-top: 5px;
   padding-bottom: 5px;
   border-top: 1px solid #000;
@@ -113,10 +118,12 @@
 }
 .lesson_chapter .section_block .section_description .section_title {
   float: left;
+  outline: none;
 }
 .lesson_chapter .section_block .section_body {
   padding-left: 160px;
   display: none;
+  outline: none;
 }
 .lesson_chapter .section_block .section_body img {
   width: 100%;
