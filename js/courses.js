@@ -26,11 +26,11 @@ $(document).ready(function() {
 
 		if ($(this).hasClass('open')) {
 			$(this).removeClass('open');
-			$('.panel.' + current).slideUp(300);
+			$('.panel.' + current).removeClass('open');
 		} else {
 			var index = $(this).index('.menu_item');
 			$('.menu_item').removeClass('open').eq(index).addClass('open');
-			$('.panel').slideUp(300).filter('.' + current).slideDown(300);
+			$('.panel').removeClass('open').filter('.' + current).addClass('open');
 		}
 	});
 

@@ -137,13 +137,15 @@ body {
   width: 100%;
   z-index: 99999999;
   top: 41px;
-  height: 240px;
   display: none;
 }
 .panels_block .panel.authors {
-  height: 480px;
   background-color: #7da8ed;
   overflow: scroll;
+}
+.panels_block .panel.authors.open {
+  display: block;
+  max-height: 480px !important;
 }
 .panels_block .panel.authors .authors_inner {
   width: 1280px;
@@ -216,13 +218,68 @@ body {
   width: 505px;
 }
 .panels_block .panel.stat {
+  overflow: scroll;
   background-color: #ebbe55;
+}
+.panels_block .panel.stat.open {
+  display: block;
+  max-height: 480px !important;
 }
 .panels_block .panel.stat .stat_courses {
   overflow: hidden;
   padding-bottom: 20px;
   border-bottom: 1px solid #000;
 }
-.panels_block .panel.stat circle.scale {
+.panels_block .panel.stat .stat_courses circle.scale {
   stroke: #ebbe55 !important;
+}
+.panels_block .panel.stat .stat_body {
+  width: 1280px;
+  margin: 0 auto;
+}
+.panels_block .panel.stat .stat_body .stat_title {
+  font: 22pt/24pt 'Pragmatica';
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.panels_block .panel.stat .stat_body .stat_lessons {
+  overflow: hidden;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson {
+  float: left;
+  margin-bottom: 60px;
+  margin-right: 80px;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_title {
+  margin-top: 15px;
+  font: 16pt/18pt 'Pragmatica';
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks {
+  margin-bottom: 60px;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_title {
+  margin-top: 30px;
+  font-weight: bold;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise {
+  margin-bottom: 8px;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_title {
+  margin-top: 5px;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_metricks {
+  margin-top: 5px;
+  overflow: hidden;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_metricks .metrick_item {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_metricks .metrick_item.cool {
+  background-color: #000;
 }

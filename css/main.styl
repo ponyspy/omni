@@ -128,12 +128,13 @@ body
 		z-index 99999999
 		top 41px
 		// bottom 0
-		height 240px
 		display none
 		&.authors
-			height 480px
 			background-color rgb(#7da8ed)
 			overflow scroll
+			&.open
+				display block
+				max-height 480px!important
 			.authors_inner
 				width 1280px
 				margin 0 auto
@@ -192,10 +193,55 @@ body
 							width 505px
 
 		&.stat
+			overflow scroll
 			background-color rgb(235, 190, 85)
+			&.open
+				display block
+				max-height 480px!important
 			.stat_courses
 				overflow hidden
 				padding-bottom 20px
 				border-bottom 1px solid black
-			circle.scale
-				stroke rgb(235, 190, 85)!important
+				circle.scale
+					stroke rgb(235, 190, 85)!important
+			.stat_body
+				width 1280px
+				margin 0 auto
+				.stat_title
+					font 22pt/24pt 'Pragmatica'
+					margin-top 15px
+					margin-bottom 15px
+				.stat_lessons
+					overflow hidden
+					.stat_lesson
+						float left
+						margin-bottom 60px
+						margin-right 80px
+						.stat_lesson_title
+							margin-top 15px
+							font 16pt/18pt 'Pragmatica'
+						.stat_lesson_blocks
+							margin-bottom 60px
+							.stat_lesson_block
+								// margin-top 15px
+								.stat_block_title
+									margin-top 30px
+									font-weight bold
+								.stat_block_exercises
+									.stat_exercise
+										margin-bottom 8px
+										.stat_exercise_title
+											margin-top 5px
+										.stat_exercise_metricks
+											margin-top 5px
+											overflow hidden
+											.metrick_item
+												float left
+												width 16px
+												height 16px
+												margin-right 8px
+												box-sizing border-box
+												border-radius 100%
+												border 1px solid black
+												&.cool
+													background-color black

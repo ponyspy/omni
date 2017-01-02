@@ -35,6 +35,24 @@ html
 						+circleElem('course_stat')(size='big')
 							| Время говорить по-русски
 				.stat_body
+					.stat_title Время говорить по-русски
+					.stat_lessons
+						each lesson, i in new Array(4)
+							.stat_lesson
+								.stat_lesson_title Lesson #{i+1}
+								.stat_lesson_blocks
+									each block, i in new Array(3)
+										.stat_lesson_block
+											.stat_block_title Scene #{i+1}
+											.stat_block_exercises
+												each exercise, i in new Array(5)
+													.stat_exercise
+														.stat_exercise_title Exercise #{i+1}
+														.stat_exercise_metricks
+															each metrick in new Array(10)
+																.metrick_item(class=Math.random() < 0.5 ? 'cool' : '')
+
+
 			.panel.authors: .authors_inner
 
 				each author in new Array(15)
