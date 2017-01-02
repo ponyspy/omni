@@ -137,15 +137,18 @@ body {
   width: 100%;
   z-index: 99999999;
   top: 41px;
-  display: none;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 .panels_block .panel.authors {
   background-color: #7da8ed;
   overflow: scroll;
 }
 .panels_block .panel.authors.open {
-  display: block;
-  max-height: 480px !important;
+  -webkit-transition: max-height 0.3s ease-in;
+  transition: max-height 0.3s ease-in;
+  max-height: 480px;
 }
 .panels_block .panel.authors .authors_inner {
   width: 1280px;
@@ -222,7 +225,8 @@ body {
   background-color: #ebbe55;
 }
 .panels_block .panel.stat.open {
-  display: block;
+  -webkit-transition: max-height 0.3s ease-in;
+  transition: max-height 0.3s ease-in;
   max-height: 480px !important;
 }
 .panels_block .panel.stat .stat_courses {

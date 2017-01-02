@@ -128,13 +128,14 @@ body
 		z-index 99999999
 		top 41px
 		// bottom 0
-		display none
+		max-height 0
+		transition max-height .3s ease-out
 		&.authors
 			background-color rgb(#7da8ed)
 			overflow scroll
 			&.open
-				display block
-				max-height 480px!important
+				transition max-height .3s ease-in
+				max-height 480px
 			.authors_inner
 				width 1280px
 				margin 0 auto
@@ -196,7 +197,7 @@ body
 			overflow scroll
 			background-color rgb(235, 190, 85)
 			&.open
-				display block
+				transition max-height .3s ease-in
 				max-height 480px!important
 			.stat_courses
 				overflow hidden
