@@ -50,7 +50,7 @@ body
 					display block
 				&:hover
 				&.open
-					background-color rgb(41, 144, 231)
+					background-color rgb(#7da8ed)
 	.menu_navigate
 		display inline-block
 		font-size 0
@@ -131,7 +131,66 @@ body
 		height 240px
 		display none
 		&.authors
-			background-color rgb(41, 144, 231)
+			height 480px
+			background-color rgb(#7da8ed)
+			overflow scroll
+			.authors_inner
+				width 1280px
+				margin 0 auto
+				margin-top 20px
+			.author_item
+				margin-bottom 20px
+				width 625px
+				border-top 1px solid black
+				box-sizing border-box
+				&:nth-child(odd)
+					float left
+				&:nth-child(even)
+					float right
+				.author_title
+					overflow hidden
+					margin-bottom 10px
+					padding-top 5px
+					.title_location
+						float left
+						font 10pt/14pt 'Pragmatica'
+					.title_name
+						float left
+						margin-left 75px
+					.title_rating
+						float right
+						border 1px solid black
+						padding-left 5px
+						padding-right 5px
+						font 10pt/12pt 'Pragmatica'
+						cursor default
+						&:hover
+							background-color black
+							color rgb(41, 144, 231)
+				.author_body
+					overflow hidden
+					.body_column
+						float left
+						&.left
+							// background-color red
+							width 120px
+							.body_photo
+								width 100px
+								height 100px
+								border-radius 100%
+								background-color lightgrey
+								box-sizing border-box
+							.body_langs
+								margin-top 10px
+								font 10pt/14pt 'Pragmatica'
+							.body_subs
+								font 10pt/14pt 'Pragmatica'
+						&.right
+							// background-color green
+							padding-left 45px
+							box-sizing border-box
+							width 505px
+
 		&.stat
 			background-color rgb(235, 190, 85)
 			.stat_courses

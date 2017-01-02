@@ -55,7 +55,7 @@ body {
 }
 .menu_block .menu_group .menu_item.authors:hover,
 .menu_block .menu_group .menu_item.authors.open {
-  background-color: #2990e7;
+  background-color: #7da8ed;
 }
 .menu_block .menu_navigate {
   display: inline-block;
@@ -141,7 +141,79 @@ body {
   display: none;
 }
 .panels_block .panel.authors {
-  background-color: #2990e7;
+  height: 480px;
+  background-color: #7da8ed;
+  overflow: scroll;
+}
+.panels_block .panel.authors .authors_inner {
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.panels_block .panel.authors .author_item {
+  margin-bottom: 20px;
+  width: 625px;
+  border-top: 1px solid #000;
+  box-sizing: border-box;
+}
+.panels_block .panel.authors .author_item:nth-child(odd) {
+  float: left;
+}
+.panels_block .panel.authors .author_item:nth-child(even) {
+  float: right;
+}
+.panels_block .panel.authors .author_item .author_title {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+.panels_block .panel.authors .author_item .author_title .title_location {
+  float: left;
+  font: 10pt/14pt 'Pragmatica';
+}
+.panels_block .panel.authors .author_item .author_title .title_name {
+  float: left;
+  margin-left: 75px;
+}
+.panels_block .panel.authors .author_item .author_title .title_rating {
+  float: right;
+  border: 1px solid #000;
+  padding-left: 5px;
+  padding-right: 5px;
+  font: 10pt/12pt 'Pragmatica';
+  cursor: default;
+}
+.panels_block .panel.authors .author_item .author_title .title_rating:hover {
+  background-color: #000;
+  color: #2990e7;
+}
+.panels_block .panel.authors .author_item .author_body {
+  overflow: hidden;
+}
+.panels_block .panel.authors .author_item .author_body .body_column {
+  float: left;
+}
+.panels_block .panel.authors .author_item .author_body .body_column.left {
+  width: 120px;
+}
+.panels_block .panel.authors .author_item .author_body .body_column.left .body_photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #d3d3d3;
+  box-sizing: border-box;
+}
+.panels_block .panel.authors .author_item .author_body .body_column.left .body_langs {
+  margin-top: 10px;
+  font: 10pt/14pt 'Pragmatica';
+}
+.panels_block .panel.authors .author_item .author_body .body_column.left .body_subs {
+  font: 10pt/14pt 'Pragmatica';
+}
+.panels_block .panel.authors .author_item .author_body .body_column.right {
+  padding-left: 45px;
+  box-sizing: border-box;
+  width: 505px;
 }
 .panels_block .panel.stat {
   background-color: #ebbe55;
