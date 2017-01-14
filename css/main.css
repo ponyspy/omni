@@ -55,7 +55,7 @@ body {
 }
 .menu_block .menu_group .menu_item.authors:hover,
 .menu_block .menu_group .menu_item.authors.open {
-  background-color: #7da8ed;
+  background-color: #83c1d8;
 }
 .menu_block .menu_navigate {
   display: inline-block;
@@ -142,7 +142,7 @@ body {
   transition: max-height 0.3s ease-out;
 }
 .panels_block .panel.authors {
-  background-color: #7da8ed;
+  background-color: #83c1d8;
   overflow: scroll;
 }
 .panels_block .panel.authors.open {
@@ -227,7 +227,7 @@ body {
 .panels_block .panel.stat.open {
   -webkit-transition: max-height 0.3s ease-in;
   transition: max-height 0.3s ease-in;
-  max-height: 480px !important;
+  max-height: 520px !important;
 }
 .panels_block .panel.stat .stat_courses {
   overflow: hidden;
@@ -251,18 +251,16 @@ body {
 }
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson {
   float: left;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   margin-right: 80px;
 }
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_title {
   margin-top: 15px;
   font: 16pt/18pt 'Pragmatica';
 }
-.panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks {
-  margin-bottom: 60px;
-}
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_title {
   margin-top: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise {
@@ -270,6 +268,7 @@ body {
 }
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_title {
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 .panels_block .panel.stat .stat_body .stat_lessons .stat_lesson .stat_lesson_blocks .stat_lesson_block .stat_block_exercises .stat_exercise .stat_exercise_metricks {
   margin-top: 5px;

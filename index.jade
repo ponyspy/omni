@@ -1,6 +1,7 @@
 include elems.jade
 
 - var randomInteger = function (min, max) { return Math.floor(min + Math.random() * (max + 1 - min)); }
+- var randomArray = function(arr) { return arr.sort(function() { return .5 - Math.random(); }).slice(0, randomInteger(1, arr.length)) }
 
 doctype html
 html
@@ -73,19 +74,15 @@ html
 			.column.left#resizable-element
 				.column_inner
 					img.logo(src='images/omni-logo-2.svg')
-					+dropMenuElem('drop_navigate', ['Все', 'Ваши', 'Подписки', 'Подтвержденные'], 0)
+					+dropMenuElem('drop_navigate', ['Все', 'Мои', 'Подписки', 'Подтвержденные'], 0)
 					.courses_block
 						each course, i in new Array(50)
 							- var lessons = new Array(randomInteger(3,10))
 							.course_block
 								.course_description_block
 									.course_langs
-										.lang RU
-										.lang EN
-										.lang JP
-										.lang FR
-										.lang IT
-										.lang DE
+										each lang in randomArray(['RU', 'EN', 'JP', 'FR', 'IT', 'DE'])
+											.lang= lang
 									.course_title Время говорить по-русски
 									.course_subscribe ПОДПИСАТЬСЯ
 								.course_preview_lessons
@@ -96,15 +93,8 @@ html
 										+circleElem('lesson_item')
 											| Урок #{i+1}
 								.course_tags_block
-									.tag moscow
-									.tag grammar
-									.tag lexical
-									.tag moscow
-									.tag grammar
-									.tag lexical
-									.tag moscow
-									.tag grammar
-									.tag lexical
+									each tag in randomArray(['moscow', 'grammar', 'lexical', 'phonetics', 'food', 'tourism'])
+										.tag= tag
 
 			.column.right
 				.column_inner

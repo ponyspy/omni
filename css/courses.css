@@ -30,6 +30,10 @@
 .courses_block .course_block .course_description_block .course_langs .lang {
   margin-right: 5px;
   float: left;
+  cursor: pointer;
+}
+.courses_block .course_block .course_description_block .course_langs .lang:hover {
+  color: #808080;
 }
 .courses_block .course_block .course_description_block .course_title {
   min-width: 200px;
