@@ -51,7 +51,8 @@ html
 														.stat_exercise_title Exercise #{i+1}
 														.stat_exercise_metricks
 															each metrick in new Array(10)
-																.metrick_item(class=Math.random() < 0.5 ? 'cool' : '')
+																- var bool = Math.random() < 0.5
+																.metrick_item(class=bool ? 'cool' : '')
 
 
 			.panel.authors: .authors_inner
