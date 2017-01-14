@@ -24,16 +24,41 @@ $(document).ready(function() {
 		}
 	});
 
-	// $(document).on('click', '.lang', function(e) {
-	// 	var $this = $(this);
-	// 	$this.data('clicked', !$this.data('clicked'));
+	var langs = [];
+	$(document)
+		.on('mouseenter', '.lang', function(e) {
+			var current_lang = $(this).attr('class').split(' ')[1];
 
-	// 	if ($this.data('clicked')) {
+			$('.lang').filter('.' + current_lang).addClass('select');
+		})
+		.on('mouseleave', '.lang', function(e) {
+			var current_lang = $(this).attr('class').split(' ')[1];
 
-	// 	} else {
+			$('.lang').filter('.' + current_lang).removeClass('select');
+		})
+		.on('click', '.lang', function(e) {
+			var $this = $(this);
+			var lang = '.' + $this.attr('class').split(' ')[1];
+			var $current_lang = $('.lang').filter(lang);
 
-	// 	}
-	// });
+			$current_lang.data('clicked', !$this.data('clicked'));
+
+			if ($this.data('clicked')) {
+				langs.push(lang);
+				$current_lang.addClass('select_fix');
+				$('.course_block').find('.course_langs').not(':has(' + lang + ')').closest('.course_block').slideUp();
+			} else {
+				langs = langs.filter(function(item) { return item !== lang; });
+				$('.lang').filter(lang).removeClass('select_fix');
+				if (langs.length !== 0) {
+					$('.course_block').find('.course_langs').has(langs.join(',')).not(':has(' + lang + ')').closest('.course_block').slideDown();
+				} else {
+					$('.course_block').find('.course_langs').not(':has(' + lang + ')').closest('.course_block').slideDown();
+				}
+			}
+
+			return false;
+		});
 
 	$('.menu_item').on('click', function(e) {
 		var $this = $(this);
@@ -59,8 +84,8 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.logo').on('click', function(e) {
-		$('.column_inner').fadeToggle(300);
-	});
+	// $('.logo').on('click', function(e) {
+	// 	$('.column_inner').fadeToggle(300);
+	// });
 
 });

@@ -32,8 +32,10 @@
   float: left;
   cursor: pointer;
 }
+.courses_block .course_block .course_description_block .course_langs .lang.select,
+.courses_block .course_block .course_description_block .course_langs .lang.select_fix,
 .courses_block .course_block .course_description_block .course_langs .lang:hover {
-  color: #808080;
+  color: #f00;
 }
 .courses_block .course_block .course_description_block .course_title {
   min-width: 200px;
@@ -83,8 +85,9 @@
   margin-right: 5px;
   cursor: pointer;
 }
+.courses_block .course_block .course_tags_block .tag.select,
 .courses_block .course_block .course_tags_block .tag:hover {
-  color: #808080;
+  color: #f00;
 }
 .courses_block .course_block .course_tags_block .tag:before {
   content: '#';
